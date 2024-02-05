@@ -53,8 +53,8 @@ async function handleCommand(command: string, params: string[]) {
                 const current: any = JSON.parse(fs.readFileSync(walletName + ".json", 'utf-8'));
                 const publicKey = new sol.PublicKey(current.publicKey);
                 let airdropAmount = params.length > 0 ? parseFloat(params[0]) : 1;
-                const  airdropSignature = await connection.requestAirdrop(publicKey, airdropAmount * sol.LAMPORTS_PER_SOL); 
-                await connection.confirmTransaction(airdropSignature); 
+                const airdropSignature = await connection.requestAirdrop(publicKey, airdropAmount * sol.LAMPORTS_PER_SOL);
+                await connection.confirmTransaction(airdropSignature);
                 console.log(`Airdrop successful. Airdropped ${airdropAmount} SOL`);
                 let balance = await connection.getBalance(publicKey);
                 await updateBalance(walletName, balance);
@@ -82,10 +82,14 @@ async function handleCommand(command: string, params: string[]) {
             });
             break;
         case 'live': // Live Stats
-            const transactionCount = await connection.getTransactionCount();
+            const epoch = await connection.getEpochInfo();
             const slot = await connection.getSlot();
-            console.log('Block Height:', slot);
-            console.log('Transaction count:', transactionCount);
+            console.log('Epoch:', epoch.epoch);
+            console.log('Absolute Slot: ', epoch.absoluteSlot);
+            console.log('Block Height:', epoch.blockHeight);
+            console.log('Transaction count:', epoch.transactionCount);
+            console.log('Slot Index:', epoch.slotIndex);
+            console.log('Slots in Epoch:', epoch.slotsInEpoch);
             console.log('Slot:', slot);
             break;
         default:
