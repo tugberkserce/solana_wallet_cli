@@ -1,30 +1,91 @@
 # Solana Wallet CLI for Advanced Solana Bootcamp - Web3.js
 
-npm i -g typescript
+This Solana Wallet CLI is a powerful command-line tool designed for the Advanced Solana Bootcamp, utilizing Web3.js functionalities.
 
-tsc --init
+## Setup
 
-tsc wallet.ts
+1. Install TypeScript globally:
 
-<commands>
-new
-balance
-airdrop [amount]
-transfer [otherPublicKey] [amount]
-live []
-<commands>
-  
-## node wallet.js new
-Creates new wallet with desired name and saves its own json file on local directory.
+    ```bash
+    npm i -g typescript
+    ```
 
-## node wallet.js balance
-You can check the desired wallet's balance with its name, if it exists.
+2. Initialize TypeScript configuration:
 
-## node wallet.js airdrop [amount]
-Airdrops desired amounts of SOL / default 1 SOL
+    ```bash
+    tsc --init
+    ```
 
-## node wallet.js transfer [otherPublicKey] [amount]
-Transfers SOL one to Another with the entered amount
+3. Compile the wallet script:
 
-## node wallet.js live
-Shows Solana live stats.
+    ```bash
+    tsc wallet.ts
+    ```
+
+## Available Commands
+
+### `new`
+
+Create a new wallet with a user-specified name and save its JSON file in the local directory.
+
+```bash
+node wallet.js new
+```
+### `balance`
+
+Certainly! Here's a simple Markdown representation of your README:
+
+markdown
+Copy code
+# Solana Wallet CLI for Advanced Solana Bootcamp - Web3.js
+
+This Solana Wallet CLI is a powerful command-line tool designed for the Advanced Solana Bootcamp, utilizing Web3.js functionalities.
+
+## Setup
+
+1. Install TypeScript globally:
+
+    ```bash
+    npm i -g typescript
+    ```
+
+2. Initialize TypeScript configuration:
+
+    ```bash
+    tsc --init
+    ```
+
+3. Compile the wallet script:
+
+    ```bash
+    tsc wallet.ts
+    ```
+
+## Available Commands
+
+### `new`
+
+Create a new wallet with a user-specified name and save its JSON file in the local directory.
+
+```bash
+node wallet.js new
+```
+### `balance`
+Check the balance of the specified wallet by name, if it exists.
+```bash
+node wallet.js balance
+```
+### `airdrop [amount]`
+Airdrop the desired amount of SOL (default is 1 SOL) to the specified wallet.
+```bash
+node wallet.js airdrop [amount]
+```
+### `transfer [otherPublicKey] [amount]`
+Transfer SOL from one wallet to another with the specified amount.
+```bash
+node wallet.js transfer [otherPublicKey] [amount]
+```
+### `live`
+```bash
+node wallet.js live
+```
