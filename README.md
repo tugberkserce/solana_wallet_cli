@@ -1,40 +1,5 @@
 # Solana Wallet CLI for Advanced Solana Bootcamp - Web3.js
 
-This Solana Wallet CLI is a powerful command-line tool designed for the Advanced Solana Bootcamp, utilizing Web3.js functionalities.
-
-## Setup
-
-1. Install TypeScript globally:
-
-    ```bash
-    npm i -g typescript
-    ```
-
-2. Initialize TypeScript configuration:
-
-    ```bash
-    tsc --init
-    ```
-
-3. Compile the wallet script:
-
-    ```bash
-    tsc wallet.ts
-    ```
-
-## Available Commands
-
-### `new`
-
-Create a new wallet with a user-specified name and save its JSON file in the local directory.
-
-```bash
-node wallet.js new
-```
-### `balance`
-
-# Solana Wallet CLI for Advanced Solana Bootcamp - Web3.js
-
 ## Setup
 
 1. Install TypeScript globally:
