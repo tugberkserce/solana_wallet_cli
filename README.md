@@ -33,13 +33,7 @@ node wallet.js new
 ```
 ### `balance`
 
-Certainly! Here's a simple Markdown representation of your README:
-
-markdown
-Copy code
 # Solana Wallet CLI for Advanced Solana Bootcamp - Web3.js
-
-This Solana Wallet CLI is a powerful command-line tool designed for the Advanced Solana Bootcamp, utilizing Web3.js functionalities.
 
 ## Setup
 
